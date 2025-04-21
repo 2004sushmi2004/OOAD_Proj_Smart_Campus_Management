@@ -1,2 +1,14 @@
-/mvnw text eol=lf
-*.cmd text eol=crlf
+# Ignore frontend and build-related files from language stats
+frontend/** linguist-vendored
+node_modules/** linguist-vendored
+target/** linguist-vendored
+
+# Optional: ignore specific types of files from detection
+*.js linguist-detectable=false
+*.html linguist-detectable=false
+*.css linguist-detectable=false
+*.json linguist-detectable=false
+webpack.config.js linguist-generated
+
+# Force .java to be counted as Java
+*.java linguist-language=Java
